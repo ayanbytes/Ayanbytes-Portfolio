@@ -50,7 +50,7 @@ export const HeroSection = () => {
       }
     }
   }, []);
-  
+
   // Handle Role cycle
   useEffect(() => {
     const interval = setInterval(() => {
@@ -62,11 +62,11 @@ export const HeroSection = () => {
   // Handle Entrance Animations
   useEffect(() => {
     if (!containerRef.current) return;
-    
+
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-    tl.fromTo(".name-reveal", 
-      { opacity: 0, y: 50 }, 
+    tl.fromTo(".name-reveal",
+      { opacity: 0, y: 50 },
       { opacity: 1, y: 0, duration: 1.2 },
       0.1
     );
@@ -96,29 +96,29 @@ export const HeroSection = () => {
 
       {/* Hero Content */}
       <div className="relative z-20 w-full h-full flex flex-col items-center justify-center text-center px-4">
-        
+
         {/* Floating Left Image Box */}
-        <motion.div 
-           className="blur-in relative lg:absolute mb-8 lg:mb-0 lg:left-20 xl:left-24 lg:top-[30%] lg:-translate-y-1/2 w-[180px] sm:w-[220px] lg:w-[280px] xl:w-[360px] aspect-[4/5] rounded-3xl lg:rounded-[2rem] overflow-hidden border border-stroke bg-surface shadow-2xl z-20 group"
-           style={{ rotateX, rotateY, transformPerspective: 1000 }}
-           onMouseMove={handleMouseMove}
-           onMouseLeave={handleMouseLeave}
+        <motion.div
+          className="blur-in relative lg:absolute mb-8 lg:mb-0 lg:left-20 xl:left-24 lg:top-[30%] lg:-translate-y-1/2 w-[180px] sm:w-[220px] lg:w-[280px] xl:w-[360px] aspect-[4/5] rounded-3xl lg:rounded-[2rem] overflow-hidden border border-stroke bg-surface shadow-2xl z-20 group"
+          style={{ rotateX, rotateY, transformPerspective: 1000 }}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
         >
-           <div className="absolute inset-0 group-hover:bg-transparent transition-colors duration-500 z-30 pointer-events-none" />
-           
-           {/* Default Image */}
-           <img 
-              src={profile2} 
-              alt="Ayan Profile" 
-              className="absolute inset-0 w-full h-full object-cover transition-all duration-[1s] ease-in-out group-hover:opacity-0 group-hover:scale-105"
-           />
-           
-           {/* Hover Image */}
-           <img 
-              src={profile1} 
-              alt="Ayan Profile Alt" 
-              className="absolute inset-0 w-full h-full object-cover opacity-0 scale-105 transition-all duration-[1s] ease-in-out group-hover:opacity-100 group-hover:scale-100"
-           />
+          <div className="absolute inset-0 group-hover:bg-transparent transition-colors duration-500 z-30 pointer-events-none" />
+
+          {/* Default Image */}
+          <img
+            src={profile2}
+            alt="Ayan Profile"
+            className="absolute inset-0 w-full h-full object-cover transition-all duration-[1s] ease-in-out group-hover:opacity-0 group-hover:scale-105"
+          />
+
+          {/* Hover Image */}
+          <img
+            src={profile1}
+            alt="Ayan Profile Alt"
+            className="absolute inset-0 w-full h-full object-cover opacity-0 scale-105 transition-all duration-[1s] ease-in-out group-hover:opacity-100 group-hover:scale-100"
+          />
         </motion.div>
         <p className="blur-in text-xs text-white/70 uppercase tracking-[0.3em] mb-8">
           PORTFOLIO '26
@@ -137,8 +137,8 @@ export const HeroSection = () => {
         </p>
 
         <div className="blur-in flex flex-col sm:flex-row items-center gap-4">
-          <a 
-            href="#work" 
+          <a
+            href="#work"
             onClick={(e) => {
               e.preventDefault();
               document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' });
@@ -150,7 +150,7 @@ export const HeroSection = () => {
               See Works
             </div>
           </a>
-          
+
           <a href="mailto:Ayanhabib.28s@gmail.com" target="_blank" rel="noopener noreferrer" className="group relative rounded-full">
             <span className="absolute -inset-[2px] rounded-full accent-gradient opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative border-2 border-white/20 bg-transparent text-white hover:bg-white hover:text-black px-7 py-3.5 rounded-full text-sm font-medium transition-all group-hover:scale-105 duration-300 flex items-center gap-2">
