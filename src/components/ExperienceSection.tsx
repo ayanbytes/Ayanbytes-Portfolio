@@ -1,5 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 
 const experiences = [
