@@ -99,7 +99,7 @@ export const HeroSection = () => {
         
         {/* Floating Left Image Box */}
         <motion.div 
-           className="hidden lg:block blur-in absolute left-20 xl:left-24 top-[30%] -translate-y-1/2 w-[280px] xl:w-[360px] aspect-[4/5] rounded-[2rem] overflow-hidden border border-stroke bg-surface shadow-2xl z-20 group"
+           className="blur-in relative lg:absolute mb-8 lg:mb-0 lg:left-20 xl:left-24 lg:top-[30%] lg:-translate-y-1/2 w-[180px] sm:w-[220px] lg:w-[280px] xl:w-[360px] aspect-[4/5] rounded-3xl lg:rounded-[2rem] overflow-hidden border border-stroke bg-surface shadow-2xl z-20 group"
            style={{ rotateX, rotateY, transformPerspective: 1000 }}
            onMouseMove={handleMouseMove}
            onMouseLeave={handleMouseLeave}

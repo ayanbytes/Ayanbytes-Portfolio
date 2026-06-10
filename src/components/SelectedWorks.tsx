@@ -326,14 +326,16 @@ export const SelectedWorks = () => {
                   </div>
 
                   {/* View Button - Bottom Right */}
-                  <div className="relative z-10 self-end translate-y-8 group-hover:translate-y-0 transition-transform duration-500 delay-200 pointer-events-auto p-8 sm:p-12 pt-0 sm:pt-0">
-                    <div className="relative p-[2px] rounded-full overflow-hidden inline-block group/btn shadow-xl">
-                      <div className="absolute inset-0 accent-gradient" />
-                      <div className="relative bg-white text-black px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 transition-colors group-hover/btn:bg-transparent group-hover/btn:text-white">
-                        View Live <ArrowUpRight className="w-4 h-4" />
+                  {currentProject.category !== "Data Analytics" && (
+                    <div className="relative z-10 self-end translate-y-8 group-hover:translate-y-0 transition-transform duration-500 delay-200 pointer-events-auto p-8 sm:p-12 pt-0 sm:pt-0">
+                      <div className="relative p-[2px] rounded-full overflow-hidden inline-block group/btn shadow-xl">
+                        <div className="absolute inset-0 accent-gradient" />
+                        <div className="relative bg-white text-black px-6 py-2.5 rounded-full text-sm font-medium flex items-center gap-2 transition-colors group-hover/btn:bg-transparent group-hover/btn:text-white">
+                          View Live <ArrowUpRight className="w-4 h-4" />
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </motion.a>
             </AnimatePresence>

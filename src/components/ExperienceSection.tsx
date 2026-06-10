@@ -34,14 +34,14 @@ const FloatingSkill = ({ iconUrl, altText, className, delay }: { iconUrl: string
     whileInView={{ opacity: 1, scale: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.6, delay }}
-    className={`absolute hidden xl:flex ${className} z-0 pointer-events-auto`}
+    className={`absolute flex ${className} z-0 pointer-events-auto`}
   >
     <motion.div
       animate={{ y: [0, -12, 0] }}
       transition={{ duration: 4 + (delay % 2), repeat: Infinity, ease: "easeInOut", delay: delay }}
-      className="group relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-white border border-gray-200 shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all cursor-default"
+      className="group relative w-10 h-10 md:w-14 md:h-14 xl:w-16 xl:h-16 rounded-full bg-white border border-gray-200 shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all cursor-default"
     >
-      <img src={iconUrl} alt={altText} className="w-8 h-8 md:w-10 md:h-10 object-contain" />
+      <img src={iconUrl} alt={altText} className="w-6 h-6 md:w-8 md:h-8 xl:w-10 xl:h-10 object-contain" />
 
       {/* Custom Tooltip */}
       <div className="absolute top-full mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-3 py-1.5 bg-black/90 backdrop-blur-md text-white text-xs font-medium rounded-lg pointer-events-none whitespace-nowrap shadow-xl z-[100] -translate-y-2 group-hover:translate-y-0">
